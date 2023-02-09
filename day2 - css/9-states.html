@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="kr">
+    <head>
+        <style>
+            div{
+                padding: 5px;
+                border-radius: 10px;
+            }
+            button:hover{
+                background-color: tomato;
+            }
+            input:focus{
+                background-color: tomato ;
+            }
+            a:hover{
+                color:blueviolet;
+            }
+            a:visited{
+                color:blue;
+            
+            }
+            a:focus{
+                color:bisque;
+            }
+            form{
+                border:1px solid salmon;
+                display: flex;
+                flex-direction: column;
+                padding: 20px;
+            }
+            form:focus-within{
+                border-color: seagreen;
+            }
+            p::selection{
+                padding: 20px;
+                color: white;
+                background-color: yellowgreen;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <button>Hello</button>
+            <input type="text" />
+            <input type="text" />
+            <a href="http://kis.ac">Go to kis.ac</a>
+            <form>
+                <input type="text" name="" id="" />
+                <input type="text" name="" id="" />
+                <input type="text" name="" id="" /> 
+            </form>
+            <p>
+                loren hellowjfjbgjfkl;dhbnml hjkl ghjkl
+            </p>
+                
+        </div>
+    </body>
+</html>

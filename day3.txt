@@ -1,0 +1,119 @@
+
+  Advanced CSS 
+
+    - powered by GPU 그래서 3D도 가능. 개ㅉㄴ다!  
+    Transition
+        state에 따라서 visual effect를 달리할 때 너무 빨리 바뀌지 말라고
+        animataion 부여하는 요소 
+
+        * state가 없는 요소에 부여되어야 함 (ex. a{}(o) a:hover{x}) 
+        * 바로 다음에 오는 요소에 있는 property 전부가 다 transition에 들어가야함 font size 가 a:hover에 있으면 transition 옆에 다 적어줍니다
+
+        ex.
+        transition: background-color 10s ease-in-out;
+
+
+        Cubic Bezier
+
+            ex.
+            transition: all cubic-bezier(0.950, 0.050, 0.795, 0.035);
+
+        
+        ex.
+        transition: color 1s cubic-bezier(0.6, 0, 0.735, 0.045),
+            border-radius 5s ease-in-out,
+            background-color 10s ease-out
+
+    Transformation
+    https://developer.mozilla.org/en-US/docs/Web/CSS/transform 
+        border-radius: 50%; 원이 된다 
+        transform: rotateY(85deg); y축을 기준으로 3D rotation
+
+        happens in different part of the page
+            box 마다 일어나는 게 아님
+            pixels 단위로 일어나는 거임
+
+            <img>랑 <span>을 겹치게 했을 경우 같이 transform 되지 않는다
+    
+    Animation 
+    https://animista.net/ 
+        creating  animation using @keyframes 
+
+        @keyframes superSexyCoinFlip{
+                from{
+                    transform: scale(0.25, 0.25) rotateX(0);
+                }
+                to{
+                    transfrom: scale(0.25, 0.25) rotateX(360deg);
+                }
+
+    Responsive Design 
+
+         @media screen and (max-width: 400px) {}
+         해석: if the screen has less than 400pixels, then~~~ 괄호 안에 명령들 happens 
+        
+        목표/예시: landscape로 보고 있는지, 세로로 보고 있는지 등등 detect할 수 있고 그거에 따라서 모드를 바꿔줌 
+
+        for certain screen size, show this particular CSS 
+
+        그냥 컴퓨터로 사이즈만 줄일  때
+        @media screen and (max-width: 600px) {
+                div{
+                    background-color: tomato;
+                }
+
+            }
+            @media screen and (min-width: 601px) and (max-width: 1200px) {
+                div{
+                    background-color: wheat;
+                }
+
+            }
+            @media screen and (min-width: 1200px) {
+                div{
+                    background-color: ;
+                }
+
+            }
+
+        ---
+
+        @media screen and (min-width: 601px) and (max-width: 1200px) and (orientation: landscape){
+                div{
+                    background-color: wheat;
+                }
+
+            }
+            span{
+                font-size: 36px;
+            }
+           @media screen and (orientation: landscape){
+               span{
+                   display: none;
+               }
+           }
+        </style>
+    </head>
+    <body>
+        <div></div>
+        <span>Please flip your phone:0</span>
+    </body>
+
+        해석: portrait 모드일때 flip하라고 하고, landscape 일때는 경고 메시지를 없애준다 
+    
+    GIT
+        - can detect changes on any file 수정내역 확인
+        - git KEEPS TRACK of files /changes
+        - 0100010101 이렇게 인식함 
+    
+    GITHUB
+        - upload the list of changes 
+
+        Repository
+            - folder with changes/ history of a file 
+
+        Commit
+            - pointing time saying that you want to save the version  
+
+
+

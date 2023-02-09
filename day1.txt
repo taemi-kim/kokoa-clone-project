@@ -1,0 +1,72 @@
+웹사이트는 그냥 text 다 
+    1. 어떤 종류의 text 를 써야하는가?
+    2. text 를 어디에 써야하는가? 
+
+---> 이 둘을 이해하면 브라우저가 우리가 쓴 코드를 이해해 graphic representation으로 구현해준다 
+
+웹 언어
+    1. HTML
+    2. CSS
+    3. Javascript 
+    관련 검색할 때 늘 뒤에 "mdn"을 붙히면 좋음 ---> mozilla developer network, good @ providing info on web 
+
+HTML
+    
+    * markup(content) language ---- bone 
+
+    웹사이트에는 content 가 표현되는데, 그 content가 무엇인지는 우리가 브라우저한테 알려주는 것이다 
+        ex. links? articles? titles? 이게 뭔지 direct해주는 게 HTML을 쓰는 우리의 역할 
+    
+    Teaching the browser 'content' 
+
+    'hey, that's a title' 
+
+CSS (cascading style sheets)
+    * design language ---- muscle 
+
+    used with HTML
+    Teaching the browser the 'layout' 
+    How should the website look like? 
+
+    'hey, that title must be green'
+
+Javascript
+    *programming language ---- brain 
+
+    makes website smarter  + interactive
+    ex. click -> action
+
+
+Learn HTML https://developer.mozilla.org/en-US/docs/Web/HTML 
+    tag ---> text (ex. 분류: title, image, link ) https://developer.mozilla.org/en-US/docs/Web/HTML/Element 
+    따로 에러는 안 뜨는데 그냥 browser가 이해못할걸
+
+    - many websites use 'lists'
+    1. ordered list
+    2. unordered list 
+
+    head
+        invisible configuration
+        meta
+            attributes:
+                name
+                content
+                charset
+                og:title, type, url, image, description : what's shown when you share the website via kakao
+    
+    <a><a/> 동시 수정 -> 선택 + command + d 
+    a="" b="" 동시 수정 -> 선택 + option
+
+    body
+        form
+            input https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input 
+        label
+            id - only 1 id per element 
+    다 외우지 못해도 되지만 
+    어떻게 attributes 를 찾고 적을지만 이해하면 할 수 있다. 구글 검색의 힘을 받아ㄹ! 
+
+    semantic
+        어떻게 적었을 때 생각을 더 짧게 할 수 있을까? 생각하기 
+        https://developer.mozilla.org/en-US/docs/Web/HTML/Content_categories 웹사이트/브라우저에 최대한 깔끔하게 알려주기  
+    
+     

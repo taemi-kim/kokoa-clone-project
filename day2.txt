@@ -1,0 +1,182 @@
+
+day 1 html recap 
+
+attributes are used in most tags 
+any tags can have id (span, link, form, id, image)
+semanic  tags 
+tags are powerful when you combine them with attributes 
+
+Adding CSS to HTML
+1. put css code & html code together on the SAME FILE 
+
+
+CSS
+    selector (가리키는 대상){}
+
+    cascading?
+        from top to bottom  
+            마지막에 적힌 코드가 적용된다 
+                    blue, yellow, yellowgreen.... <- 얘가 된다 
+
+    
+    background-color?
+        box 옆에 다른 게 올 순 없음
+        span을 highlight 했었으면 그 옆에 뭔가 올 수 있음 
+    
+    block vs inline
+        단독 : block 
+            boxes, headers
+        옆에 오는 거 : inline
+            span, links, images
+        
+        span의 display: default는 'in-line'인데 'block'으로 바꿔줄 수 있음
+        display: inline은 width, height 제공 안해줌 
+
+        Properties of Box
+            margin
+                space from border of the box to the outside!!!
+                box의 디폴트값을 바꿔주면 된다 
+                'margin'만 적으면 상하좌우 똑같음
+                margin : Apx Bpx;
+                    A : 상하
+                    B : 좌우
+                margin : a b c d; 시계방향
+                    a: 상
+                    b: 우
+                    c: 하
+                    d: 좌 
+
+                *COLLAPSING MARGINS*
+                - vertically (위 아래만)
+                body와 div(흰 박스와 보라색 박스)의 경계가 동일할 때 일어남
+                이런 현상을 resolve 하기 위해 padding을 씀! 
+
+                inline
+                    doesn't have width nor height 
+                    margin left & right
+                
+                in-line block sucks!!! 
+                    bc it doesn't support Responsive Design 
+
+        
+            padding
+                border of the box to the inside
+            border
+                border: 2px solid black; 
+                * {} 전체 적용 
+            
+    classes
+        <span class="classname">
+        .{classname} 
+
+    FLEXBOX
+        you don't talk to children you talk to their parents
+            ex) div - children, body - parents 
+            body에다가 display = flex 입력하고 
+        
+        justify-content : main axis에서 움직임
+        align-items : cross axis에서 움직임 
+
+        vh -> viewport height 라는 measurement 화면크기에 따라서 비율이 달라져도 영향받지 않도록
+
+        body의 height이 설정되어있지 않으면 align-items가 먹히지 않는다 
+
+        https://mingnol2.tistory.com/61 
+
+        body {
+            display: flex
+        }
+
+        div {
+            display: flex
+        }
+
+        <div>1<div>
+        
+        1의 아부지? div
+        div의 아부지? body
+
+        body는 flex container
+        div는 body의 children container
+        div도 flex container (for the content inside div)
+    
+    position: fixed
+        stay where it is (on that layer)
+        moment you change top, bottom, etc 새로운 layer 만드는거야 
+
+        netflix 상단바처럼 스크롤 내려도 계속 보이고 같이 있는 거 
+    
+    position: static
+        원래 시작했던 지점에서 머무르도록
+
+    position: relative
+        unlock top, bottom. 
+    
+    position: absolute
+        가장 가까운 부모 중 relative 인 것을 찾아 가까이 간다 
+        relative 한 게 없으면 body에 붙음
+
+    pseudo selector
+        # -> id
+        . -> class
+        specific 한 class 를 고르고 싶을 때 (첫번째, 마지막, 어떤 거 뒤에)
+
+        div: 했을 때 나오는 많은 옵션들ㄹ
+
+            div:first-child {
+                background-color: tomato;
+            }
+            div:last-child {
+                background-color: teal;
+
+            }
+        span:nth-child(식){
+            background-color: teal;
+        }
+            식에 
+            n, n+1, 4n+1, 등등 쓸 수 있음 
+        
+        span{}
+        pspan{}
+        p 안에 숨겨진 span만 색칠하고 싶을 때 적는다! 
+        
+        Combinators 문법 해석
+
+            div > span {} div 바로 밑에 있는 span
+                * direct parent & children
+                div{ span{} }
+
+            p + span p 바로! 옆에 있는 span
+                * direct brothers & sisters
+                {p{} span{}}
+            
+            p ~ span p 건너건너 옆에 있는 span, 바로 옆 아니여도 된다 
+                * direct brothers & sisters
+                {p{} span{}}
+        
+
+        more examples
+
+            attr~=value attr that contains the value 
+            attr^=value attr whose value is prefixed
+            attr&=value
+
+    states
+        active: click 하고 있을 때 
+        hover: 마우스 올려놓고 있었을 때 
+        focus: 키보드로 선택됐을 때 
+        visited: link only 
+
+    form:focus-within{}
+    focus 되었다면 안에처럼 만들어줘라~
+
+    form:hover input{
+        background-color: sienna; 
+    }--> only happens when form is hover and input is inside it 
+
+    input::placeholder{
+        color: yellowgreen;
+    } placeholder 색 바꾸고 싶을 때 
+
+    https://matthewlein.com/tools/ceaser 
+            
